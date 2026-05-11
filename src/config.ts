@@ -3,7 +3,7 @@ export const SITE = {
   author: "Your Name",
   profile: "https://your-domain.com/about",
   desc: "技术博客，记录前端开发与架构实践",
-  title: "My Blog",
+  title: "昨日全球科技要闻",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
