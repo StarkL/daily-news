@@ -4,29 +4,20 @@ permissions:
   contents: read
 
 on:
-  workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
-    branches:
-      - main
+  push:
+    branches: [main]
+    paths:
+      - "dist/**"
 
 jobs:
   deploy:
     name: Deploy to VPS
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    if: >
-      github.event.workflow_run.conclusion == 'success'
-      && github.event.workflow_run.head_branch == 'main'
 
     steps:
-      - name: "📦 Download build artifacts"
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ github.token }}
+      - name: "☁️ Checkout repository"
+        uses: actions/checkout@v4
 
       - name: "🚀 Sync to VPS"
         uses: easingthemes/ssh-deploy@main
