@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://your-domain.com/", // replace this with your deployed domain
+  website: "http://182.92.95.136/blog", // replace this with your deployed domain
   author: "Your Name",
-  profile: "https://your-domain.com/about",
+  profile: "http://182.92.95.136/blog/about",
   desc: "技术博客，记录前端开发与架构实践",
   title: "昨日全球科技要闻",
   ogImage: "astropaper-og.jpg",
