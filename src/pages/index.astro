@@ -24,7 +24,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        你好，世界
+        信息聚合 · AI 筛选
       </h1>
       <a
         target="_blank"
@@ -41,17 +41,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        技术博客，记录前端开发与架构实践。
+      <p class="mt-4">
+        聚合 Hacker News、Reddit、RSS、Telegram 等多源资讯，
+        AI 每日自动筛选评分，为你呈现最有价值的科技资讯。
       </p>
-      <p class="mt-2">
-        阅读博客文章或查看
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> 了解更多信息。
+      <p class="mt-2 text-sm text-muted-foreground">
+        评分标准：<strong>9-10</strong> 重大突破 · <strong>7-8</strong> 高价值发展 · <strong>5-6</strong> 值得了解 · <strong>3-4</strong> 常规更新 · <strong>0-2</strong> 噪音过滤
       </p>
       {
         // only display if at least one social link is enabled
