@@ -21,7 +21,7 @@ html[data-theme="dark"] {
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app: "Inter", ui-monospace, "SF Mono", "Cascadia Code", "Segoe UI Mono", monospace, system-ui, -apple-system, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
