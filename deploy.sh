@@ -8,6 +8,9 @@ VPS_HOST="root@182.92.95.136"
 VPS_TARGET="/usr/share/nginx/html/blog"
 SSH_KEY="$HOME/.ssh/blog_deploy_key"
 
+echo "📦 Clearing Astro cache..."
+rm -rf .astro
+
 echo "📦 Building blog..."
 pnpm run build
 
